@@ -1,0 +1,12 @@
+Issue:: 
+	1 Created local remote repo
+	2 moved from local remote repo to GitHub
+	3 Error:: While git pull
+		fatal: refusing to merge unrelated histories
+
+Fix::
+	git remote add origin <repository url>
+
+	git pull origin master --allow-unrelated-histories
+
+	Ref:: https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase
