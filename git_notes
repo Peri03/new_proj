@@ -1,0 +1,48 @@
+Basic WorkFlow
+
+GIT
+
+	Git init <working directory>
+	
+		create new file
+			
+			git add <added to staging/tracking> 
+
+				Git status <list the status of working directory>
+				
+					git ls-files <to list the tracked files>
+					
+						git commit -m "<commit msg>"
+						
+							git pull <to check sync between working  & remote repo>
+							
+								git push origin master <remote repo url>
+
+========================================================================================
+Git edit || backout changes
+
+--------once file added to staging ------------------
+
+	git reset HEAD file.txt <file will removed from staging || NOTE:: file contents will not be changed>
+	
+		git checkout -- file.txt <discard the latest changes || backout to latest commit>
+		
+			git mv file.txt newfile.txt <Renames the fileand added to staging area>
+			
+				git rm file.txt <file will be deleted if it is tracked by GIT || if not use "rm" || to restore "git reset HEAD" & git check out>
+					git add -A <to update the git tree>
+
+================================================================================================
+Git log
+
+	git log --oneline --graph --decorate < Single line || asci format >
+		
+			git log --since "2 days ago" < shows the last 2 days commit>
+			
+				git log -- file.txt <shows the commit log of given file>
+					
+					git log *from commit id* ... * to commit id* <shows the commit data within the range>
+					
+							git show *commit id* <shows the data of particulr commit id>
+
+===================================================================================================					
